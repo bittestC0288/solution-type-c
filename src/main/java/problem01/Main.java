@@ -39,6 +39,18 @@ public class Main {
 	}
 	
 	public static boolean checkAnswer(int answer) {
-		return true;
+		
+		boolean passYn;		// 정답 여부
+		
+		passYn = randomNumber == answer ? true : false;
+		
+		if(!passYn) {
+			min = randomNumber > answer ? answer : min;
+			max = randomNumber < answer ? answer : max;
+		} 
+		
+		count++;
+		
+		return passYn;
 	}
 }
